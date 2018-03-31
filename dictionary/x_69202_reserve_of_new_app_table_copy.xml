@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="New App Table Copy" max_length="40" name="x_69202_reserve_of_new_app_table_copy" type="collection"/>
+</database>
