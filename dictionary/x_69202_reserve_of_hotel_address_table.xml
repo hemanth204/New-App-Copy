@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Hotel Address Table" max_length="40" name="x_69202_reserve_of_hotel_address_table" type="collection">
+        <element label="Address" max_length="100" name="address" type="string"/>
+        <element label="City" max_length="32" name="city" reference="x_69202_reserve_of_hotel_cities" type="reference"/>
+        <element label="Reservation Fee" max_length="20" name="price" type="currency"/>
+        <element label="State" max_length="32" name="state" reference="x_69202_reserve_of_hotel_states" type="reference"/>
+        <index name="index">
+            <element name="city"/>
+        </index>
+        <index name="index2">
+            <element name="state"/>
+        </index>
+    </element>
+</database>

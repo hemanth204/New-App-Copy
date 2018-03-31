@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_69202_reserve_of.Hotel_State_City_Selection</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Hotel_State_City_Selection</name>
+        <script><![CDATA[var Hotel_State_City_Selection = Class.create();
+Hotel_State_City_Selection.prototype = {
+    initialize: function() {
+    },
+state: function(){
+	var ss=' ';
+	var st=current.select_state;
+	var a= new GlideRecord('x_69202_reserve_of_hotel_address_table');
+	a.addQuery('state',st);
+	a.query();
+	while(a.next()){
+		ss+=(','+a.city.toString());
+	}
+	return 'sys_idIN' +ss;
+},
+	
+
+	
+	
+	
+	
+    type: 'Hotel_State_City_Selection'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-21 14:48:19</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>c78bbdebdbd41300351059d0cf96191d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hotel_State_City_Selection</sys_name>
+        <sys_package display_value="Reserve of Hotel" source="x_69202_reserve_of">31b3b5abdb941300351059d0cf961999</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Reserve of Hotel">31b3b5abdb941300351059d0cf961999</sys_scope>
+        <sys_update_name>sys_script_include_c78bbdebdbd41300351059d0cf96191d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-21 14:48:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

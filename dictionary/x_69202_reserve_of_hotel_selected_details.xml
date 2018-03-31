@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Hotel Selected Details" max_length="40" name="x_69202_reserve_of_hotel_selected_details" type="collection">
+        <element label="Address" max_length="100" name="address" type="string"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+        <element label="Fare" max_length="20" name="fare" type="currency"/>
+        <element label="Number" max_length="32" name="number" reference="x_69202_reserve_of_new_hotel_booking" type="reference"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <index name="index">
+            <element name="number"/>
+        </index>
+    </element>
+</database>

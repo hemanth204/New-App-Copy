@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="New Hotel Booking" max_length="40" name="x_69202_reserve_of_new_hotel_booking" type="collection">
+        <element label="Address of Customer" max_length="100" name="address_of_customer" type="string"/>
+        <element label="Booking Needed?" max_length="40" name="booking_needed" type="glide_date"/>
+        <element label="Food Required?" max_length="40" name="food_required" type="boolean"/>
+        <element label="How many Members?" max_length="40" name="how_many_members" type="integer"/>
+        <element label="Name of Customer" max_length="40" name="name_of_customer" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Purpose of Visit" max_length="100" name="purpose_of_visit" type="string"/>
+        <element label="Reason for Reject" max_length="100" name="reason_for_reject" type="string"/>
+        <element label="Select City" max_length="32" name="select_city" reference="x_69202_reserve_of_hotel_cities" reference_qual="javascript: new Hotel_State_City_Selection().state()" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Select State" max_length="32" name="select_state" reference="x_69202_reserve_of_hotel_states" type="reference"/>
+        <element choice="3" default="1" label="Status" max_length="40" name="status" read_only="true" type="string">
+            <choice>
+                <element label="First Stage" sequence="1" value="1"/>
+                <element label="Work In Progress" sequence="2" value="2"/>
+                <element label="Waiting for Approval" sequence="3" value="3"/>
+                <element label="Approved" sequence="4" value="4"/>
+                <element label="Rejected" sequence="5" value="5"/>
+            </choice>
+        </element>
+        <element label="Submitter Name" max_length="32" name="submitter_name" read_only="true" type="string"/>
+        <element label="Whether any known Person in Hotel?" max_length="32" name="whether_any_known_person_in_hotel" reference="sys_user" type="reference"/>
+        <element choice="1" label="Which Is Preferrable?" max_length="40" name="which_is_preferrable" type="string">
+            <choice>
+                <element label="Chineese" value="1"/>
+                <element label="Indian" value="2"/>
+                <element label="Italian" value="3"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="select_city"/>
+        </index>
+        <index name="index2">
+            <element name="submitter_name"/>
+        </index>
+        <index name="index3">
+            <element name="select_state"/>
+        </index>
+    </element>
+</database>

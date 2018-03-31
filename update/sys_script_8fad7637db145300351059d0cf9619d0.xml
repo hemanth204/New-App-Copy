@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>true</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_69202_reserve_of_new_hotel_booking</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Load Table Automate</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	var st2=[];
+	var city2=[];
+	var add2=[];
+	var st1='';
+	var city1='';
+	var add='';
+	var st=current.select_state.getDisplayValue();
+	var city=current.select_city.getDisplayValue();
+	
+var det1=new GlideRecord('x_69202_reserve_of_hotel_selected_details');
+	det1.addQuery('number',current.sys_id);
+	det1.addQuery('state',st);
+	det1.addQuery('city',city);
+	det1.query();
+	if(det1.next()){
+		//gs.addInfoMessage("loop entered");
+	var det3=new GlideRecord('x_69202_reserve_of_hotel_selected_details');
+		det3.addQuery('state','');
+		det3.addQuery('city','');
+		det3.addQuery('address','');
+		det3.query();
+		if(det3.next()){
+			det3.deleteMultiple();
+		}
+		current.setAbortAction(true);
+	}	
+	else{
+	var hotel=new GlideRecord('x_69202_reserve_of_hotel_address_table');
+	hotel.addQuery('state.state',st);
+	hotel.addQuery('city.city',city );
+	hotel.query();
+	while(hotel.next()){
+		st1+=(','+hotel.state.state.toString());
+		city1+=(','+hotel.city.city.toString());
+		add+=(','+hotel.address.toString());
+	}
+	var det=new GlideRecord('x_69202_reserve_of_hotel_selected_details');
+	det.query();
+	st2=st1.split(',');
+	city2=city1.split(',');
+	add2=add.split(',');
+	for(var i=0;i<st2.length;i++){
+		det.number=current.sys_id;
+		det.state=st2[i];
+		det.city=city2[i];
+		det.address=add2[i];
+		det.insert();
+	}
+	}
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-22 14:25:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8fad7637db145300351059d0cf9619d0</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Load Table Automate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Reserve of Hotel" source="x_69202_reserve_of">31b3b5abdb941300351059d0cf961999</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Reserve of Hotel">31b3b5abdb941300351059d0cf961999</sys_scope>
+        <sys_update_name>sys_script_8fad7637db145300351059d0cf9619d0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-22 15:00:05</sys_updated_on>
+        <template/>
+        <when>before_display</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=8fad7637db145300351059d0cf9619d0"/>
+</record_update>

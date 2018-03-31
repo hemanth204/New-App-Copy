@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysevent_register">
+    <sysevent_register action="INSERT_OR_UPDATE">
+        <description/>
+        <event_name>x_69202_reserve_of.reservationbook</event_name>
+        <fired_by>UI action</fired_by>
+        <queue/>
+        <suffix>reservationbook</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-25 02:44:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>b10e7fa0dba81300351059d0cf961923</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_69202_reserve_of.reservationbook</sys_name>
+        <sys_package display_value="Reserve of Hotel" source="x_69202_reserve_of">31b3b5abdb941300351059d0cf961999</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Reserve of Hotel">31b3b5abdb941300351059d0cf961999</sys_scope>
+        <sys_update_name>sysevent_register_b10e7fa0dba81300351059d0cf961923</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-25 02:44:02</sys_updated_on>
+        <table>x_69202_reserve_of_new_hotel_booking</table>
+    </sysevent_register>
+</record_update>

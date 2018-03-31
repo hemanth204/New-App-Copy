@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Hotel States" max_length="40" name="x_69202_reserve_of_hotel_states" type="collection">
+        <element display="true" label="State" max_length="40" name="state" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>which_is_preferrable</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-02-22 14:47:47</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9b07473fdb145300351059d0cf9619c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>which_is_preferrable</sys_name>
+        <sys_package display_value="Reserve of Hotel" source="x_69202_reserve_of">31b3b5abdb941300351059d0cf961999</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Reserve of Hotel">31b3b5abdb941300351059d0cf961999</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9b07473fdb145300351059d0cf9619c9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-02-22 14:47:47</sys_updated_on>
+        <table>x_69202_reserve_of_new_hotel_booking</table>
+        <ui_policy display_value="Hide Fields">b6f6073fdb145300351059d0cf9619e3</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

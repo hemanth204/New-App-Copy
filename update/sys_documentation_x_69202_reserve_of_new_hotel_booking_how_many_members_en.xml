@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_documentation element="how_many_members" label="How many Members?" language="en" table="x_69202_reserve_of_new_hotel_booking">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>how_many_members</element>
+            <help/>
+            <hint/>
+            <label>How many Members?</label>
+            <language>en</language>
+            <name>x_69202_reserve_of_new_hotel_booking</name>
+            <plural>How many Members?s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2018-02-21 14:07:06</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>bc347d27dbd41300351059d0cf961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>How many Members?</sys_name>
+            <sys_package display_value="Reserve of Hotel" source="x_69202_reserve_of">31b3b5abdb941300351059d0cf961999</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Reserve of Hotel">31b3b5abdb941300351059d0cf961999</sys_scope>
+            <sys_update_name>sys_documentation_x_69202_reserve_of_new_hotel_booking_how_many_members_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2018-02-21 14:07:06</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
